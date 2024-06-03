@@ -1,0 +1,117 @@
+@import "variables";
+@import "mixins";
+@import "reset"; // Якщо ви бажаєте використовувати файл для скидання стилів
+
+header {
+  background-color: $primary-color;
+  color: white;
+  padding: 10px 0;
+
+  .container {
+    display: flex;
+    justify-content: center;
+  }
+
+  nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+
+    li {
+      margin-right: 20px;
+
+      a {
+        text-decoration: none;
+        color: white;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+.content {
+  display: flex;
+  padding: 20px;
+
+  .images {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    img {
+      width: 80%;
+      height: auto;
+      margin-bottom: 10px;
+    }
+  }
+
+  .profile {
+    flex: 1;
+    text-align: center;
+
+    img {
+      border-radius: 50%;
+      width: 150px;
+      height: 150px;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      color: $primary-color;
+    }
+
+    p {
+      color: $secondary-color;
+    }
+
+    .services {
+      margin-top: 20px;
+
+      label {
+        display: block;
+        margin-bottom: 5px;
+      }
+
+      select {
+        width: 100%;
+        padding: 5px;
+        margin-bottom: 10px;
+      }
+
+      button {
+        background-color: $primary-color;
+        color: white;
+        border: none;
+        padding: 8px 16px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+
+        &:hover {
+          background-color: darken($primary-color, 10%);
+        }
+      }
+    }
+  }
+}
+
+footer {
+  background-color: $secondary-color;
+  color: white;
+  padding: 10px 0;
+
+  .pagination {
+    display: flex;
+    justify-content: center;
+
+    a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+  }
+}

@@ -1,0 +1,189 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2; /* Сірий фон */
+}
+
+header {
+    background-color: white;
+    color: #333;
+    padding: 10px 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    background-color: #f0f0f0;
+}
+
+nav ul li a.contact-link {
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.images {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.images img {
+    width: 60%; /* Зменшимо ширину зображень */
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.profile {
+    flex: 1;
+    text-align: center;
+}
+
+.profile img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin-bottom: 20px;
+}
+
+.profile h2 {
+    color: #333;
+}
+
+.profile p {
+    color: #666;
+}
+
+.services {
+    margin-top: 20px;
+}
+
+.services label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.services select {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.services button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.services button:hover {
+    background-color: #555;
+}
+
+.map-container {
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px; /* Додаємо відступ зверху */
+}
+
+.services-content {
+    padding: 20px;
+    text-align: center;
+}
+
+.services-content h1 {
+    color: #333;
+}
+
+.services-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.services-content ul li {
+    background-color: #f0f0f0;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+footer {
+    background-color: #666;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+footer .pagination {
+    display: flex;
+    justify-content: center;
+}
+
+footer .pagination a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    display: none;
+    z-index: 1000;
+}
+
+#back-to-top:hover {
+    background-color: #555;
+}
+
+#contacts-popup {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#contacts-popup p {
+    margin: 5px 0;
+}

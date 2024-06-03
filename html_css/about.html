@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Про мене</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Стилі для контейнера мапи */
+        .map-container {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            height: 0;
+            padding-top: 56.25%; /* Співвідношення сторін для вбудованого iframe (9:16) */
+        }
+        .map-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Головна</a></li>
+                    <li><a href="services.html">Послуги</a></li>
+                    <li><a href="about.html">Про мене</a></li>
+                    <li><a href="#" onmouseover="showContacts()">Контакти</a>
+                        <div id="contacts-popup" onmouseout="hideContacts()">
+                            <p>(093)-123-12-12</p>
+                            <p>(067)-123-12-12</p>
+                            <p>(050)-123-12-12</p>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <div class="content">
+        <div class="about-section">
+            <h1>Про мене</h1>
+            <div class="about-info">
+                <p>Мені 22 роки, закінчую навчання по професії "Комп'ютерна інженерія" і сподіваюсь закрити предмет "Інтернет програмування" на 60 балів.</p>
+                <p>Моє хобі: ремонтувати, чистити та взаємодіяти з комп'ютерними системами.</p>
+                <p>У зв'язку з війною в країні, слідкую за новинами та часто переглядаю мапу Deepstate</p>
+                <!-- Вбудований iframe мапи Deepstate -->
+                <div class="map-container">
+                    <iframe src="https://deepstatemap.live/#6/49.438/32.053" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <button id="back-to-top" onclick="scrollToTop()">⬆️</button>
+
+    <script>
+        function returnToHome() {
+            window.location.href = "index.html";
+            return false; // Це забезпечить відміну стандартної дії посилання
+        }
+
+        function scrollToTop() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+
+        function showContacts() {
+            var contactsPopup = document.getElementById("contacts-popup");
+            contactsPopup.style.display = "block";
+        }
+
+        function hideContacts() {
+            var contactsPopup = document.getElementById("contacts-popup");
+            contactsPopup.style.display = "none";
+        }
+    </script>
+</body>
+</html>
